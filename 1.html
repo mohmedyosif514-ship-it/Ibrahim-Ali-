@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Anggaran Harian</title>
+    <link rel="stylesheet" href="1.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>💰 Pengelola Anggaran Harian</h1>
+            <p>Solusi pemecahan masalah keuangan harian mahasiswa & pelajar</p>
+        </header>
+
+        <main>
+            <!-- Form Input -->
+            <section class="card form-section">
+                <h2>Input Keuangan</h2>
+                <form id="budget-form">
+                    <div class="form-group">
+                        <label for="income">Total Uang Saku / Pemasukan (Rp):</label>
+                        <input type="number" id="income" placeholder="Contoh: 500000" required min="0">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="days">Alokasi Untuk Berapa Hari:</label>
+                        <input type="number" id="days" placeholder="Contoh: 7" required min="1">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="expense">Total Pengeluaran Saat Ini (Rp):</label>
+                        <input type="number" id="expense" placeholder="Contoh: 50000" min="0" value="0">
+                    </div>
+
+                    <button type="submit" id="btn-calculate">Hitung Anggaran</button>
+                </form>
+            </section>
+
+            <!-- Ringkasan Hasil -->
+            <section class="card result-section" id="result-card">
+                <h2>Hasil Perhitungan</h2>
+                <div class="result-grid">
+                    <div class="result-box">
+                        <h3>Batas Maks. / Hari</h3>
+                        <p id="daily-limit">Rp 0</p>
+                    </div>
+                    <div class="result-box">
+                        <h3>Sisa Saldo</h3>
+                        <p id="remaining-balance">Rp 0</p>
+                    </div>
+                    <div class="result-box">
+                        <h3>Status Keuangan</h3>
+                        <p id="status-badge" class="badge">Belum Dihitung</p>
+                    </div>
+                </div>
+                <div id="advice-message" class="advice"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Tugas Pemrograman Web - All Rights Reserved</p>
+        </footer>
+    </div>
+
+    <script src="1.js"></script>
+</body>
+</html>
